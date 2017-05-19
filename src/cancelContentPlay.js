@@ -65,7 +65,8 @@ export default function cancelContentPlay(player) {
       player.pause();
     }
 
-    // When the 'content-playback' state is entered, this will let us know to play
+    // When the 'content-playback' state is entered, this will let us know to play.
+    // This is needed if there is no preroll or if it errors, times out, etc.
     player.ads._cancelledPlay = true;
   }, 1);
 }
